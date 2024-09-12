@@ -8,3 +8,8 @@ bool isIn24HourRange(int a, int b, int c) {
 
   return a > b;
 }
+
+// Determine if args is leap year
+bool isLeapYear(int y) {
+  return (y % 4 == 0 && y % 100 != 0) || (y % 400 == 0);
+}
