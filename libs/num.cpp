@@ -12,3 +12,18 @@ bool includeN(int n, int target) {
   }
   return false;
 }
+
+// Find the number of unique triplet combinations (i, j, k)
+// such that i + j + k = x, where 1 <= i < j < k <= n
+int countTripletCombinations(int n, int x) {
+  int count = 0;
+  for (int i = 1; i <= n - 2; ++i) {
+    for (int j = i + 1; j <= n - 1; ++j) {
+      int k = x - i - j;
+      if (k > j && k <= n) {
+        count++;
+      }
+    }
+  }
+  return count;
+}
