@@ -14,3 +14,10 @@ double minkowski(const vector<double>& x, const vector<double>& y, double p) {
   rep(i, x.size()) { distance += pow(abs(x[i] - y[i]), p); }
   return pow(distance, 1.0 / p);
 }
+
+// Calculate Chebyshev distance
+double chebyshev(const vector<double>& x, const vector<double>& y) {
+  double maxDiff = 0.0;
+  rep(i, x.size()) { maxDiff = max(maxDiff, abs(x[i] - y[i])); }
+  return maxDiff;
+}
