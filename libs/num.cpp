@@ -33,3 +33,17 @@ int gcd(int a, int b) {
   if (b == 0) return a;
   return gcd(b, a % b);
 }
+
+// Determine if int:n is prime number
+bool isPrime(int n) {
+  if (n == 2) return true;
+  if (n < 2 || n % 2 == 0) return false;
+
+  int i = 3;
+  double sqrt_n = sqrt(n);
+  while (i <= sqrt_n) {
+    if (n % i == 0) return false;
+    i = i + 2;
+  }
+  return true;
+}
